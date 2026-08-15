@@ -1,0 +1,6 @@
+# Relatórios do Artillery
+*.json
+*.html
+
+# Dependências do Node (caso ainda não tenha)
+node_modules/
