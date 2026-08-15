@@ -1,0 +1,18 @@
+config: 
+  target: "https://api-qa-fap2026.onrender.com/api"
+  phases: 
+    - duration: 60
+      arrivalrate: 10
+      rampTo: 50
+      name: "Pico de carga - 10 a 50 requisições por segundo"
+
+scenarios: 
+  - name: "Fluxo de login"
+    flow: 
+    - post:
+        url: "/login"
+        json:
+          email: "admin@system.com"
+          password: "AdminPassword123"
+        expect: 
+          - statusCode: 200
